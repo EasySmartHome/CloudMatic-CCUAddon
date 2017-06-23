@@ -4,7 +4,7 @@ v1=`cp $ADDONDIR/badip $ADDONDIR/checkip`
 v2=`cp $ADDONDIR/baddns $ADDONDIR/checkdns`
 v4=`wget -O $ADDONDIR/checkdns 'http://www.meine-homematic.de/statusdns.php' -q`
 
-v5=`rm -f /etc/config/addons/mh/result.txt'`
+v5=`rm -f /etc/config/addons/mh/result.txt`
 
 v5=`echo '<h2><u><b>Testergebnisse:</u></b></h2>' >> /etc/config/addons/mh/result.txt`
 

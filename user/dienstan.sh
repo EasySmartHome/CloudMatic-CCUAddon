@@ -11,7 +11,7 @@
 ADDONDIR=/usr/local/etc/config/addons/mh
 /bin/busybox logger -t homematic -p user.info "VPN Dienst wird aktiviert"
 v2=`cp $ADDONDIR/dienstan $ADDONDIR/dienst`
-###/opt/mh/user/loop.sh &
+/opt/mh/user/loop.sh &
 
 if [ -s /usr/local/crontabs/root ]; then
 	cat /usr/local/crontabs/root | grep -v "/usr/local/etc/config/addons/mh/cloudmaticcheck.sh" | sort | uniq >/tmp/crontab.$$

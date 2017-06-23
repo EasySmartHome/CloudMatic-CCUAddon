@@ -1,7 +1,7 @@
 #!/bin/sh
 ADDONDIR=/usr/local/etc/config/addons/mh
 
-v5=`rm -f /etc/config/addons/mh/result2.txt'`
+v5=`rm -f /etc/config/addons/mh/result2.txt`
 
 v5=`echo '<h2><u><b>Erweiterte Systeminformationen f&uuml;r den meine-homematic.de Support:</u></b></h2>' >> /etc/config/addons/mh/result2.txt`
 
