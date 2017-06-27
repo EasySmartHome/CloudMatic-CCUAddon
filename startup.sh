@@ -14,16 +14,17 @@ if [ ! -e $USER_DIR ] ; then
   
   rm -rf $WWW_DIR
   ln -s $BASE_DIR/www $WWW_DIR
-  
+
+fi
+
+# convert from meine-homematic.de to CloudMatic
+if grep -q "ID mh CONFIG_NAME meine-homematic.de" /etc/config/hm_addons.cfg 2>/dev/null; then
+  sed -i 's/CONFIG_NAME meine-homematic.de/CONFIG_NAME CloudMatic/g' /etc/config/hm_addons.cfg
+fi
+
+# make sure cloudmatic button is always present
+if ! grep -q "ID mh CONFIG_NAME CloudMatic" /etc/config/hm_addons.cfg 2>/dev/null; then
   $BASE_DIR/install.tcl
-
-else
-
-  # make sure cloudmatic button is always present
-  if ! grep -q "ID mh CONFIG_NAME CloudMatic" /etc/config/hm_addons.cfg 2>/dev/null; then
-    $BASE_DIR/install.tcl
-  fi
-
 fi
 
 if [ ! -d /dev/net ]; then
