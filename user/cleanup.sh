@@ -37,7 +37,14 @@ ln -s $BASE_DIR/www $WWW_DIR
   
 $BASE_DIR/install.tcl
 
-l1=`ifconfig | grep 'eth0' | tr -s ' ' | cut -d ' ' -f5 | tr ':' '-'`
-l2=`ifconfig | grep 'usb0' | tr -s ' ' | cut -d ' ' -f5 | tr ':' '-'` 
+if [[ -e /sys/devices/platform/ccu2-ic200 ]]; then
+  # this is for a CCU2
+  l1=`ifconfig | grep 'eth0' | tr -s ' ' | cut -d ' ' -f5 | tr ':' '-'`
+  l2=`ifconfig | grep 'usb0' | tr -s ' ' | cut -d ' ' -f5 | tr ':' '-'`
+else
+  # this is for RaspberryMatic
+  l1=`grep Serial /proc/cpuinfo | sed 's|Serial||' | sed 's|:||' | sed 's/^[ \t]*//'`
+  l2=`ifconfig | grep 'eth0' | tr -s ' ' | cut -d ' ' -f5 | tr ':' '-'`
+fi
 echo SerialNumber=$l1 > /etc/config/addons/mh/ids
 echo BidCoS-Address=$l2 >> /etc/config/addons/mh/ids
