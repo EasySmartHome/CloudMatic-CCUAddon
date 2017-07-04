@@ -6,7 +6,7 @@ WWWDIR=/etc/config/addons/www/$ADDONNAME
 CONFIGDIR=/usr/local/etc/config
 RCDDIR=$CONFIGDIR/rc.d
 
-openvpn=$ADDONDIR/openvpn
+openvpn=/opt/mh/openvpn
 piddir=/var/run/openvpn
 
 case "$1" in
