@@ -49,14 +49,14 @@ ADDONDIR=/usr/local/etc/config/addons/mh
 		Processname=zabbix_agentd
 		if [ ! -n "`pidof $Processname`" ] ; then  
 			/bin/busybox logger -t homematic -p user.info "CloudMatic monitoring Dienst wird gestartet"
-			ovstart=`/etc/config/addons/mh/zabbix_agentd -c /etc/config/addons/mh/zabbix.conf >/dev/null 2>&1`
+			ovstart=`/opt/mh/user/zabbix_agentd -c /etc/config/addons/mh/zabbix.conf >/dev/null 2>&1`
 		fi
 	fi
 
 	Processname=nginx
 	if [ ! -n "`pidof $Processname`" ] ; then  
 		/bin/busybox logger -t homematic -p user.info "Reverse Proxy Dienst wird gestartet"
-		ovstart=`/usr/local/etc/config/addons/mh/nginx`
+		ovstart=`/opt/mh/user/nginx`
 	fi
  else
     #
@@ -92,7 +92,3 @@ ADDONDIR=/usr/local/etc/config/addons/mh
 			dummy=`killall -9 nginx`
 		fi
 	fi
-	
-	
-
-	

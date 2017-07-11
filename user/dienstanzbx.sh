@@ -17,6 +17,6 @@ if [ -e $ADDONDIR/zabbix.conf ] ; then
 	Processname=zabbix_agentd
 	if [ ! -n "`pidof $Processname`" ] ; then  
 		/bin/busybox logger -t homematic -p user.info "CloudMatic monitoring Dienst wird gestartet"
-		ovstart=`/etc/config/addons/mh/zabbix_agentd -c /etc/config/addons/mh/zabbix.conf >/dev/null 2>&1`
+		ovstart=`/opt/mh/user/zabbix_agentd -c /etc/config/addons/mh/zabbix.conf >/dev/null 2>&1`
 	fi
 fi

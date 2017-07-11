@@ -12,18 +12,8 @@ ADDONDIR=/usr/local/etc/config/addons/mh
 /bin/busybox logger -t homematic -p user.info "Reverse proxy wird deaktiviert"
 v2=`cp $ADDONDIR/dienstaus $ADDONDIR/dienstngx`
 
-if [[ -e /sys/devices/platform/ccu2-ic200 ]]; then
-  # CCU2
-  Processname=nginx
-else
-  # RaspberryMatic
-  Processname=nginx.pi
-fi
-
+Processname=nginx
 if [ -n "`pidof $Processname`" ] ; then  
    /bin/busybox logger -t homematic -p user.info "Reverse Proxy wurde herunter gefahren"
    dummy=`killall -9 $Processname`
 fi
-
-
-
