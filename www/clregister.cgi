@@ -14,8 +14,7 @@ set user_has_account unknown
 set content [::HomeMatic::Util::LoadFile "/etc/config/addons/mh/mhcfg"]
 catch { [regexp -line {user_has_account=(.*)} $content dummy user_has_account] }
 
-puts {
-<!DOCTYPE html>
+puts { <!DOCTYPE html>
 <html>
   <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
