@@ -19,14 +19,13 @@ set register_pending unknown
 set content [::HomeMatic::Util::LoadFile "/etc/config/addons/mh/register_pending"]
 catch { [regexp -line {status=(.*)} $content dummy register_pending] }
 
-puts {
-<!DOCTYPE html>
+puts { <!DOCTYPE html>
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
     <link type="text/css" rel="stylesheet" href="css/cloudmatic.css"  media="screen,projection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>CloudMatic (v2017020901)</title>
+    <title>CloudMatic (v20180325)</title>
   </head>
 <body>
 <script>
