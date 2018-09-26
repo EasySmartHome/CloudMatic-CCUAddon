@@ -583,7 +583,7 @@ if {$autoupdate == 0} {
 } else {
 	puts {
 		    Automatische Updates sind aktiv, die Pr&uuml;fung erfolgt mehrmals t&auml;glich.<br><br>
-		    <a href="autoupdateaus.cgi" class="waves-effect waves-light btn blue stopupdate"><i class="material-icons left">cancel</i>Automatische Updates deakivieren</a>
+		    <a href="autoupdateaus.cgi" class="waves-effect waves-light btn blue stopupdate"><i class="material-icons left">cancel</i>Automatische Updates deaktivieren</a>
 	}
 }
 puts {
