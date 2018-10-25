@@ -14,7 +14,10 @@ set user_has_account unknown
 set content [::HomeMatic::Util::LoadFile "/etc/config/addons/mh/mhcfg"]
 catch { [regexp -line {user_has_account=(.*)} $content dummy user_has_account] }
 
-puts { <!DOCTYPE html>
+puts "Content-Type: text/html; charset=utf-8"
+
+puts {
+<!DOCTYPE html>
 <html>
   <head>
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,6 +25,7 @@ puts { <!DOCTYPE html>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection">
     <link type="text/css" rel="stylesheet" href="css/cloudmatic.css"  media="screen,projection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>CloudMatic</title>
   </head>
 <body>

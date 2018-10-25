@@ -13,9 +13,10 @@ set user_has_account unknown
 set content [::HomeMatic::Util::LoadFile "/etc/config/addons/mh/mhcfg"]
 catch { [regexp -line {user_has_account=(.*)} $content dummy user_has_account] }
 
+puts "Content-Type: text/html; charset=utf-8"
 
-
-puts { <!DOCTYPE html>
+puts {
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
