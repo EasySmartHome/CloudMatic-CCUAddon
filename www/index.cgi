@@ -29,7 +29,7 @@ puts {
     <link type="text/css" rel="stylesheet" href="css/cloudmatic.css"  media="screen,projection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>CloudMatic (v20190507)</title>
+    <title>CloudMatic (v20200115)</title>
   </head>
 <body>
 <script>
@@ -250,7 +250,7 @@ if {$user_has_account == 1} {
   set standardsms 0
   set premiumsms 0
 	set smarthomeliz 0
-	set smarthometype "Werbefinanzierte Testversion"
+	set smarthometype "Keine Internetverbindung / keine Buchung?"
   set key 0
 	set content [::HomeMatic::Util::LoadFile "/etc/config/addons/mh/mhcfg"]
 	catch { [regexp -line {premiumjahr=(.*)} $content dummy premiumjahr] }
@@ -311,7 +311,10 @@ if {$user_has_account == 1} {
     <div id="status" class="cm-content" style="display:none;">
       <!-- Headline -->
       <div class="row">
-        <div class="col s12"><h4>CloudMatic Dashboard</h4>Hier haben Sie einen zentralen &Uuml;berblick auf Ihre pers&ouml;nlichen Daten und Zug&auml;nge. </div>
+        <div class="col s12">
+          <h4>CloudMatic Dashboard</h4>Hier haben Sie einen zentralen &Uuml;berblick auf Ihre pers&ouml;nlichen Daten und Zug&auml;nge.<br>
+          <b>Hinweis</b>: es wird nur die Laufzeit der aktuellen Buchung angezeigt! Eventuelle Neubuchungen k&ouml;nnen online im <a href="https://www.cloudmatic.de/member/dashboard" target="_blank">Kundencenter</a> eingesehen werden.
+        </div>
       </div>
       <!-- /Headline -->
       <!-- Status Cards -->
@@ -699,8 +702,8 @@ puts {
           Westerklei 4<br>
           59505 Bad Sassendorf<br>
           Fon: +49 2921 3274020<br>
-          (Mo.-Fr. 10:00-17:00 Uhr)<br>
-          <a href="mailto:office@easy-smarthome.de" class="grey-text text-lighten-4">office@easy-smarthome.de</a>
+          (Mo.-Fr. 10:00-12:00 Uhr, 13:00-17:00 Uhr)<br>
+          <a href="mailto:support@easy-smarthome.de" class="grey-text text-lighten-4">support@easy-smarthome.de</a>
         </p>
       </div>
       <div class="col l8 s12">
@@ -720,6 +723,15 @@ puts {
     </div>
   </div>
 </footer>
+<div id="service_modal_attention" class="modal">
+  <div class="modal-content">
+    <span id="service_modal_attention_headline"></span>
+  </div>
+  <div class="modal-footer">
+    <a href="dienstaus.cgi" class="waves-effect waves-light btn red stopservice">Dienst beenden</a>&nbsp;&nbsp;&nbsp;
+    <a href="" class="modal-submit modal-action modal-close waves-effect waves-blue btn-flat">Abbrechen</a>
+  </div>
+</div>
 <div id="service_modal" class="modal">
   <div class="modal-content">
     <span id="service_modal_headline"></span>
@@ -786,7 +798,3 @@ puts {
 </body>
 </html>
 }
-
-
-
-

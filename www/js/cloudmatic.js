@@ -33,9 +33,16 @@ $(document).ready(function() {
   });
   $(".stopservice").click(function(e) {
     e.preventDefault();
-    $(".modal-submit").attr("href","?s=services");
-    $("#service_modal_headline").html('<h5>Dienst wird beendet</h5>Der Dienst wird beendet, bitte haben Sie einen Moment Geduld ...<br><br>');
-    postdata(this);
+    console.log($(this).data('type'));
+    if ($(this).data('type') == 'vpn') {
+      $("#service_modal_attention_headline").html('<h5>Achtung!</h5>Wenn Sie den VPN-Dienst beenden wird kein Fernzugriff mehr m&ouml;glich sein!<br>Sind Sie sicher?');
+      $("#service_modal_attention").openModal();
+    } else {
+      $("#service_modal_attention").closeModal();
+      $(".modal-submit").attr("href","?s=services");
+      $("#service_modal_headline").html('<h5>Dienst wird beendet</h5>Der Dienst wird beendet, bitte haben Sie einen Moment Geduld ...<br><br>');
+      postdata(this);
+    }
   });
   $(".startupdate").click(function(e) {
     e.preventDefault();
@@ -46,7 +53,7 @@ $(document).ready(function() {
   $(".stopupdate").click(function(e) {
     e.preventDefault();
     $(".modal-submit").attr("href","?s=update");
-    $("#service_modal_headline").html('<h5>Updates werden deaktiviert</h5>Ddie automatischen Updates werden deaktiviert, bitte haben Sie einen Moment Geduld ...<br><br>');
+    $("#service_modal_headline").html('<h5>Updates werden deaktiviert</h5>Die automatischen Updates werden deaktiviert, bitte haben Sie einen Moment Geduld ...<br><br>');
     postdata(this);
   });
   $(".manualupdate").click(function(e) {
