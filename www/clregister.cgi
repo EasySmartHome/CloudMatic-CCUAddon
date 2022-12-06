@@ -180,14 +180,14 @@ puts {
     <div class="col s12">
       <h6>Technischer Hinweis:</h6>
       <p>
-        Um CloudMatic SmartHome zur Fernsteuerung oder CloudMatic notify me f&uuml;r SMS, Push oder Mail nutzen zu k&ouml;nnen, m&uuml;ssen 
-        Sie sich f&uuml;r ein CloudMatic Konto registrieren, auch wenn Sie die Premium VPN Dienste CloudMatic connect nicht nutzen m&ouml;chten.
+        Um CloudMatic SmartHome zur Fernsteuerung oder CloudMatic NotifyMe f&uuml;r SMS, Push oder Mail nutzen zu k&ouml;nnen, m&uuml;ssen 
+        Sie sich f&uuml;r ein CloudMatic Konto registrieren, auch wenn Sie die Premium VPN Dienste CloudMatic Connect nicht nutzen m&ouml;chten.
       </p>
       <p>
         CloudMatic wird betrieben von der EASY SmartHome GmbH, <a href="https://www.easy-smarthome.de" target="_blank">www.easy-smarthome.de</a>
       </p>
       <p>
-        <b>CloudMatic connect</b> ist der neue Produktname f&uuml;r den "meine-homematic.de Premium VPN Zugang".
+        <b>CloudMatic Connect</b> ist der neue Produktname f&uuml;r den "meine-homematic.de Premium VPN Zugang".
       </p>
     </div>
   </div>
@@ -224,11 +224,11 @@ puts {
         <h5 class="white-text">Kontakt</h5>
         <p class="grey-text text-lighten-4">
           EASY SmartHome GmbH<br>
-          Westerklei 4<br>
+          Neuer Weg 1<br>
           59505 Bad Sassendorf<br>
-          Fon: +49 2921 3274020<br>
-          (Mo.-Fr. 10:00-17:00 Uhr)<br>
-          <a href="mailto:office@easy-smarthome.de" class="grey-text text-lighten-4">office@easy-smarthome.de</a>
+          Fon: +49 2921 370380<br>
+          (Mo.-Fr. 10:00-12:00 und 13:00-17:00 Uhr)<br>
+          <a href="mailto:kontakt@easy-smarthome.de" class="grey-text text-lighten-4">kontakt@easy-smarthome.de</a>
         </p>
       </div>
       <div class="col l8 s12">
