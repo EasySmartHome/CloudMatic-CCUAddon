@@ -131,14 +131,14 @@ puts {
     <div class="col s12">
       <div class="row">
         <div class="col s4">
-          <img src="img/cmvpn.png" alt="CloudMatic connect" class="responsive-img">
+          <img src="img/cmvpn.png" alt="CloudMatic Connect" class="responsive-img">
         </div>
         <div class="col s8">
-          <h4>CloudMatic connect - sicherer Fernzugriff auf Ihre Haussteuerung</h4>
+          <h4>CloudMatic Connect - sicherer Fernzugriff auf Ihre Haussteuerung</h4>
           <p>
             <h6>Weltweiter Zugriff - per APP und Webbrowser</h6>
-            Sie m&ouml;chten von &uuml;berall auf Ihre Haussteuerung zugreifen k&ouml;nnen? Sicher und komfortabel? Nutzen Sie CloudMatic connect!
-            &Uuml;ber die sichere Anbindung von CloudMatic connect greifen Sie &uuml;ber das Internet auf Ihre HomeMatic Haussteuerung zu.
+            Sie m&ouml;chten von &uuml;berall auf Ihre Haussteuerung zugreifen k&ouml;nnen? Sicher und komfortabel? Nutzen Sie CloudMatic Connect!
+            &Uuml;ber die sichere Anbindung von CloudMatic Connect greifen Sie &uuml;ber das Internet auf Ihre HomeMatic Haussteuerung zu.
           </p> 
         </div>
         <div class="col s12">
@@ -160,19 +160,19 @@ puts {
     <div class="col s12">
       <div class="row">
         <div class="col s4">
-          <img src="img/cmcomplete.png" alt="CloudMatic complete" class="responsive-img">
+          <img src="img/cmcomplete.png" alt="CloudMatic Complete" class="responsive-img">
         </div>
         <div class="col s8">
-          <h4>CloudMatic complete - sicherer Fernzugriff & komfortable Bedienoberfl&auml;che</h4>
+          <h4>CloudMatic Complete - sicherer Fernzugriff & komfortable Bedienoberfl&auml;che</h4>
           <p>
             <h6>Alles in einem</h6>
-            Mit CloudMatic complete steht Ihnen ein sicherer Fernzugriff und eine komfortable Bedienoberfl&auml;che zur 
+            Mit CloudMatic Complete steht Ihnen ein sicherer Fernzugriff und eine komfortable Bedienoberfl&auml;che zur 
             Verf&uuml;gung. Hiermit brauchen Sie Ihre HomeMatic Haussteuerung nicht mehr &uuml;ber die Oberfl&auml;che der Zentrale bedienen, sondern nutzen 
             unsere Cloud-basierte L&ouml;sung - von &uuml;berall und mit jedem Endger&auml;t ... auch per Smartphone/Tablet! 
           </p> 
         </div>
         <div class="col s12">
-          <h6>Mit CloudMatic complete k&ouml;nnen Sie:</h6>
+          <h6>Mit CloudMatic Complete k&ouml;nnen Sie:</h6>
           <ul>
             <li>Ihre HomeMatic Zentrale vom SmartPhone, Tablet oder PC aus bedienen, lokal und per Internet durch einen gesicherten VPN-Tunnel.</li>
             <li>Eine beliebige Zahl individuelle Ansichten erstellen, die eine schnelle Status-&Uuml;bersicht und eine einfache Bedienung erlauben.</li>
@@ -190,10 +190,10 @@ puts {
     <div class="col s12">
       <div class="row">
         <div class="col s4">
-          <img src="img/cmsms.png" alt="CloudMatic notify me" class="responsive-img">
+          <img src="img/cmsms.png" alt="CloudMatic NotifyMe" class="responsive-img">
         </div>
         <div class="col s8">
-          <h4>CloudMatic notify me - Schnell informiert dank SMS, Pushnachrichten und Mail</h4>
+          <h4>CloudMatic NotifyMe - Schnell informiert dank SMS, Pushnachrichten und Mail</h4>
           <p>
             <h6>Versenden Sie SMS direkt von Ihrer HomeMatic Zentrale!</h6>
             SMS k&ouml;nnen ganz einfach per Skript von der Zentrale versendet werden. Der SMS Versand kann als zus&auml;tzliche Aktion bei einem 
@@ -203,7 +203,7 @@ puts {
         </div>
         <div class="col s12">
           <h6>Push Nachrichten direkt auf Ihr Smartphone*</h6>
-          Sie m&ouml;chten zus&auml;tzlich Pushnachrichten auf Ihr Smartphone erhalten? Mit CloudMatic notify me kein Problem.
+          Sie m&ouml;chten zus&auml;tzlich Pushnachrichten auf Ihr Smartphone erhalten? Mit CloudMatic NotifyMe kein Problem.
           Einfach Premium-Guthaben buchen, ggf. die ben&ouml;tigte App auf Ihr Smartphone installieren und ein Script auf Ihrer Zentrale erstellen!
           <br><br>
           <a href="clregister.cgi" class="waves-effect waves-light btn blue"><i class="material-icons left">mode_edit</i>Jetzt testen</a>
@@ -218,7 +218,7 @@ puts {
     <div class="col s12">
       <div class="row">
         <div class="col s4">
-          <img src="img/zufrieden.jpg" alt="CloudMatic notify me" class="responsive-img">
+          <img src="img/zufrieden.jpg" alt="CloudMatic NotifyMe" class="responsive-img">
         </div>
         <div class="col s8">
           <h4>Alle Funktionen 30 Tage kostenlos und unverbindlich testen</h4>
@@ -345,11 +345,11 @@ if {$user_has_account == 1} {
 # check if user has no valid complete/FullService
 if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebucht" || $smarthometype == "CloudMatic SmartHome"} {
   puts {
-        <!-- CloudMatic connect -->
+        <!-- CloudMatic Connect -->
         <div class="col s12 m6">
           <div class="card white">
             <div class="card-content black-text">
-              <span class="card-title">CloudMatic connect</span>
+              <span class="card-title">CloudMatic Connect</span>
               <p>
                 Fernzugriff: <script>document.write('<a href="https://'+userid+'.'+base_url+'" target="_blank">');</script>https://<script>document.write(userid);</script>.<script>document.write(base_url);</script></a><br>
                 Laufzeit:
@@ -364,7 +364,7 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             </div>
           </div>
         </div>
-        <!-- /CloudMatic connect -->
+        <!-- /CloudMatic Connect -->
   }
   if {$smarthomeliz != "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebucht" && $smarthometype == "CloudMatic SmartHome"} {
     puts {
@@ -390,14 +390,14 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
   }
 } else {
   puts {
-        <!-- CloudMatic complete / FullService -->
+        <!-- CloudMatic Complete / FullService -->
         <div class="col s12 m6">
           <div class="card white">
             <div class="card-content black-text">
               <span class="card-title">
   }
-  if {$smarthometype == "TESTZUGANG CloudMatic complete"} {
-    puts "CloudMatic complete <sup><small>Testzugang</small></sup>"
+  if {$smarthometype == "TESTZUGANG CloudMatic Complete"} {
+    puts "CloudMatic Complete <sup><small>Testzugang</small></sup>"
   } else { 
     puts "$smarthometype"
   } 
@@ -414,7 +414,7 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             </div>
             <div class="card-action">
   }
-  if {$smarthometype == "CloudMatic complete" || $smarthometype == "TESTZUGANG CloudMatic complete"} {
+  if {$smarthometype == "CloudMatic Complete" || $smarthometype == "TESTZUGANG CloudMatic Complete"} {
     puts {
               <script>document.write('<a href="http://go.cloudmatic.de/order-cloudmatic-complete" target="_blank" class="waves-effect waves-light btn blue">');</script><i class="material-icons left">shopping_cart</i>Zugang buchen</a>
     }
@@ -428,11 +428,11 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             </div>
           </div>
         </div>
-        <!-- /CloudMatic complete / FullService -->
+        <!-- /CloudMatic Complete / FullService -->
   }
 }
   puts {
-        <!-- CloudMatic notify me -->
+        <!-- CloudMatic NotifyMe -->
         <div class="col s12 m6">
           <div class="card white">
             <div class="card-content black-text">
@@ -447,7 +447,7 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             </div>
           </div>
         </div>
-        <!-- /CloudMatic notify me -->
+        <!-- /CloudMatic NotifyMe -->
 
       </div>
       <!-- /Status Cards -->
@@ -498,7 +498,7 @@ puts {
       <div class="col s12">
         <div class="row">
           <div class="col s4">
-            <img src="img/cmvpn.png" alt="CloudMatic connect" class="responsive-img">
+            <img src="img/cmvpn.png" alt="CloudMatic Connect" class="responsive-img">
           </div>
           <div class="col s8">
             <h6>CloudMatic VPN Zugang</h6>
@@ -699,11 +699,11 @@ puts {
         <h5 class="white-text">Kontakt</h5>
         <p class="grey-text text-lighten-4">
           EASY SmartHome GmbH<br>
-          Westerklei 4<br>
+          Neuer Weg 1<br>
           59505 Bad Sassendorf<br>
-          Fon: +49 2921 3274020<br>
-          (Mo.-Fr. 10:00-12:00 Uhr, 13:00-17:00 Uhr)<br>
-          <a href="mailto:support@easy-smarthome.de" class="grey-text text-lighten-4">support@easy-smarthome.de</a>
+          Fon: +49 2921 370380<br>
+          (Mo.-Fr. 10:00-12:00 Uhr und 13:00-17:00 Uhr)<br>
+          <a href="mailto:kontakt@easy-smarthome.de" class="grey-text text-lighten-4">kontakt@easy-smarthome.de</a>
         </p>
       </div>
       <div class="col l8 s12">
