@@ -29,7 +29,7 @@ puts {
     <link type="text/css" rel="stylesheet" href="css/cloudmatic.css"  media="screen,projection">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>CloudMatic (v20200115)</title>
+    <title>CloudMatic (v2022260501)</title>
   </head>
 <body>
 <script>
