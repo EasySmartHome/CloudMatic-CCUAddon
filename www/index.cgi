@@ -396,7 +396,7 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             <div class="card-content black-text">
               <span class="card-title">
   }
-  if {$smarthometype == "TESTZUGANG CloudMatic Complete"} {
+  if {$smarthometype == "TESTZUGANG CloudMatic Complete" || $smarthometype == "TESTZUGANG CloudMatic complete"} {
     puts "CloudMatic Complete <sup><small>Testzugang</small></sup>"
   } else { 
     puts "$smarthometype"
@@ -414,7 +414,7 @@ if {$smarthomeliz == "Fehler beim Pr&uuml;fen der Lizenz oder keine Lizenz gebuc
             </div>
             <div class="card-action">
   }
-  if {$smarthometype == "CloudMatic Complete" || $smarthometype == "TESTZUGANG CloudMatic Complete"} {
+  if {$smarthometype == "CloudMatic Complete" || $smarthometype == "TESTZUGANG CloudMatic Complete" || $smarthometype == "CloudMatic complete" || $smarthometype == "TESTZUGANG CloudMatic complete"} {
     puts {
               <script>document.write('<a href="http://go.cloudmatic.de/order-cloudmatic-complete" target="_blank" class="waves-effect waves-light btn blue">');</script><i class="material-icons left">shopping_cart</i>Zugang buchen</a>
     }
