@@ -312,7 +312,7 @@ if {$user_has_account == 1} {
       <!-- Headline -->
       <div class="row">
         <div class="col s12">
-          <h4>CloudMatic Dashboard</h4>Hier haben Sie einen zentralen &Uuml;berblick auf Ihre pers&ouml;nlichen Daten und Zug&auml;nge.<br>
+          <h4>CloudMatic <sup><small>CCU</small></sup> Dashboard</h4>Hier haben Sie einen zentralen &Uuml;berblick auf Ihre pers&ouml;nlichen Daten und Zug&auml;nge.<br>
           <b>Hinweis</b>: es wird nur die Laufzeit der aktuellen Buchung angezeigt! Eventuelle Neubuchungen k&ouml;nnen online im <a href="https://www.cloudmatic.de/member/dashboard" target="_blank">Kundencenter</a> eingesehen werden.
         </div>
       </div>
