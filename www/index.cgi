@@ -638,50 +638,103 @@ puts {
     <div class="row">
       <div class="col s12">
         <h4>Support</h4>
-        Hier erhalten Sie Informationen zum Support.
+          <p>
+            Wir bieten Ihnen E-Mail-Support, eine Telefonsupport-Hotline mit hilfsbereiten Mitarbeitern und eine schnelle Bearbeitung Ihrer Anliegen via Ticketsystem. 
+            Oder Sie nutzen unsere umfangreiche Knowledge Base, hier finden Sie ganz bequem und unkompliziert Antworten und Hilfestellungen auf die gängigsten Fragen.
+          </p>
       </div>
     </div>
+    
     <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="col s4">
-            <img src="img/cmservice.png" alt="CloudMatic Service Partner" class="responsive-img">
-          </div>
-          <div class="col s8">
-            <h6>Service Partner Netzwerk</h6>
-            <p>
-              Sie haben ein technisches Problem und kommen nicht weiter? Sie br&auml;uchten jemanden, der sich damit auskennt? Den gibt es! 
-              Die CloudMatic Service Partner bieten Ihnen Service rund um Ihre HomeMatic Installation!
+            
+      <div class="col s12 m12">                  
+        <div class="card white">
+        
+            <div class="card-content black-text">
+              <span class="card-title">Knowledge Base</span>
+              <p>
+                In unserer Knowledge Base finden Sie Anleitungen und How-to-Guides zu unseren Produkten, Antworten auf die gängigsten Fragen und praktische Anwendungsbeispiele für verschiedene Nutzungszwecke.
+              </p>
+            </div>
+                        
+            <div class="card-action">
+                <script>document.write('<a href="http://kb.easy-smarthome.de/Start" target="_blank" class="waves-effect waves-light btn blue">');</script><i class="material-icons left">live_help</i>Zur Knowledge Base</a>
+            </div>
+              
+        </div>           
+      </div><!-- col s12 m12 -->
+    
+    </div><!-- row -->
+
+    <div class="row">
+        
+      <div class="col s12 m6">                  
+        <div class="card white">
+        
+            <div class="card-content black-text">
+              <span class="card-title">Telefonsupport-Hotline</span>
+              <p>
+                Unsere Knowledge Base konnte Ihnen nicht weiterhelfen und Sie wünschen sich telefonische Hilfestellung bei einer technischen Angelegenheit?
+                <br><br>
+                Kein Problem, unser Support-Team steht Ihnen Montags bis Freitags von 10:00 - 12:00 Uhr und 13:00 - 17:00 Uhr zur Verfügung.
+              </p>
+            </div>
+                        
+            <div class="card-action">
+              <span class="h4blue">+49 (0)2921 / 370 380</span>
+            </div>
+              
+        </div>           
+      </div><!-- col s12 m6 -->
+      
+      <div class="col s12 m6">                  
+        <div class="card white">
+        
+            <div class="card-content black-text">
+              <span class="card-title">E-Mail-Support</span>
+              <p>
+                Senden Sie uns Ihre technischen Fragen oder Supportwünsche. 
+                Um Rückfragen zu vermeiden, beschreiben Sie ihr Anliegen so genau wie möglich. Das erspart Ihnen mögliche Rückfragen und gewährleistet eine schnelle Bearbeitung Ihres Anliegens. Unsere Mitarbeiter melden sich schnellstmöglich bei Ihnen.
+              </p>
+            </div>
+                        
+            <div class="card-action">
+                <script>document.write('<a href="https://support.easy-smarthome.de/supportrequest.html" target="_blank" class="waves-effect waves-light btn blue">');</script><i class="material-icons left">content_paste</i>Supportanfrage stellen</a>
+            </div>
+              
+        </div>           
+      </div><!-- col s12 m6 -->
+    
+    </div><!-- row -->
+    
+    <div class="row">
+            
+      <div class="col s12 m12">                  
+        <div class="card white">
+        
+            <div class="card-content black-text">
+              <span class="card-title">Unsere Supportleistungen</span>
+              <p>
+                Sie planen ein Smarthome wissen aber nicht so recht, wie Sie beginnen sollen bzw. welche Geräte Sie benötigen? 
+                Wir unterstützen Sie gerne bei Ihrem Vorhaben! Sie wählen die Funktionen, wir finden herstellerunabhängig die beste Smarthome-Technik für Sie.                
+              </p>
               <ul>
-                <li>Unterst&uuml;tzung bei der Planung Ihrer HomeMatic Installation</li>
-                <li>Einrichtung von Komponenten, Programmen und Skripten per Fernwartung</li>
-                <li>Hilfe bei der Einrichtung von CloudMatic und diverser Zusatzsoftware</li>
-                <li>Fachkompetente Beratung bei Problemstellungen, optional auch bei Ihnen vor Ort</li>
+              <li>Planung und Vorkonfiguration von Smarthome Installationen</li>
+              <li>Individuelle Smarthome Programmierungen</li>
+              <li>Konfiguration von Zentralen und Gateways</li>
+              <li>Einrichtungen nach Vorgabe</li>
               </ul>
-              Unsere Service Partner kennen sich aus - mit Hausautomatisation, IT, CloudMatic und HomeMatic Produkten. Informieren Sie 
-              sich auf unserer Homepage &uuml;ber das Leistungsangebot des CloudMatic Service Partner Netzwerks.<br>
-              <script>document.write('<a href="http://go.cloudmatic.de/servicepartner" target="_blank">');</script>Jetzt &uuml;ber das Service - Angebot informieren</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col s12">
-        <h6>Anleitungen</h6>
-        <p>
-          Aktuelle Anleitungen, Beispiele & Scripte rund um CloudMatic finden Sie in unserer Knowlede Base unter
-          <a href="http://kb.easy-smarthome.de/cloudmatic" target="_blank">http://kb.easy-smarthome.de/cloudmatic</a>
-        </p>
-        <h6>Fehlersuche</h6>
-        <p>
-          Bitte nutzen Sie zuerst die Funktionspr&uuml;fung zur Eingrenzung m&ouml;glicher Fehler. Weitere Hinweise zur
-          Fehlersuche finden Sie <script>document.write('<a href="http://kb.easy-smarthome.de/cloudmatic/fehlersuche" target="_blank">');</script>hier</a>.
-          Sollte sich das Problem so nicht l&ouml;sen lassen, erstellen Sie bitte ein Support-Ticket in unserem
-          <script>document.write('<a href="https://support.easy-smarthome.de/" target="_blank">');</script>Ticket System</a>.
-        </p>
-      </div>
-    </div>
+            </div>
+                        
+            <div class="card-action">
+                <script>document.write('<a href="https://support.easy-smarthome.de/" target="_blank" class="waves-effect waves-light btn blue">');</script><i class="material-icons left">info</i>Mehr dazu im Support Center</a>
+            </div>
+              
+        </div>           
+      </div><!-- col s12 m12 -->
+    
+    </div><!-- row -->
+    
   </div>
 }
 
@@ -701,9 +754,8 @@ puts {
           EASY SmartHome GmbH<br>
           Neuer Weg 1<br>
           59505 Bad Sassendorf<br>
-          Fon: +49 2921 370380<br>
-          (Mo.-Fr. 10:00-12:00 Uhr und 13:00-17:00 Uhr)<br>
-          <a href="mailto:kontakt@easy-smarthome.de" class="grey-text text-lighten-4">kontakt@easy-smarthome.de</a>
+          <br>
+          <a href="#!" class="cm-nav grey-text text-lighten-4" style="text-decoration:underline;" data-content="support">Support erhalten</a>
         </p>
       </div>
       <div class="col l8 s12">

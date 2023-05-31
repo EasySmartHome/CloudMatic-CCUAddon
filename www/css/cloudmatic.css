@@ -105,4 +105,8 @@ input:focus:not([type]):not([readonly]) + label, input[type="text"]:focus:not([r
 
   /* Support for IE. */
   font-feature-settings: 'liga';
-}    
+}
+.h4blue {
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1920 - 300)));
+  color: #1D71B8;
+}
