@@ -20,6 +20,7 @@
 # **************************************************************************************************************************************************
 #
 ADDONDIR=/usr/local/etc/config/addons/mh
+VERSION=`cat /VERSION |grep PRODUCT |awk -F"=" '{ print $2 }'|awk -F"_" '{print $1}'`
 
   #Dienst Status einlesen
   dienst=`/bin/busybox cat $ADDONDIR/dienst`
@@ -37,6 +38,15 @@ ADDONDIR=/usr/local/etc/config/addons/mh
      #
      # Aktuelles Datum ist vor dem Enddatum. VPN starten, falls es nicht läuft
      #
+     # Workaround RaspberryMatic
+     # https://github.com/jens-maus/RaspberryMatic/issues/2442
+     if [ "$VERSION" = "raspmatic" ]; then
+         if [ -f "/usr/local/etc/config/addons/mh/client.conf" ]; then
+             if [ ! "$(grep 'tls-cipher "DEFAULT:@SECLEVEL=0"' /usr/local/etc/config/addons/mh/client.conf)" ]; then
+                 echo 'tls-cipher "DEFAULT:@SECLEVEL=0"' >> $ADDONDIR/client.conf
+             fi
+         fi
+     fi
      Processname=openvpn
      if [ ! -n "`pidof $Processname`" ] ; then  
         if [ $dienst -ge 1 ] ; then
