@@ -38,20 +38,47 @@ VERSION=`cat /VERSION |grep PRODUCT |awk -F"=" '{ print $2 }'|awk -F"_" '{print 
      #
      # Aktuelles Datum ist vor dem Enddatum. VPN starten, falls es nicht läuft
      #
+     
      # Workaround RaspberryMatic
      # https://github.com/jens-maus/RaspberryMatic/issues/2442
+     
+     clientConfFilePath="/usr/local/etc/config/addons/mh/client.conf"
+     certificateFilePath="/usr/local/etc/config/addons/mh/client.crt"
+     workaroundTlsCipher="tls-cipher \"DEFAULT:@SECLEVEL=0\""
+     clientConfToUse="$clientConfFilePath"
+     
      if [ "$VERSION" = "raspmatic" ]; then
-         if [ -f "/usr/local/etc/config/addons/mh/client.conf" ]; then
-             if [ ! "$(grep 'tls-cipher "DEFAULT:@SECLEVEL=0"' /usr/local/etc/config/addons/mh/client.conf)" ]; then
-                 echo 'tls-cipher "DEFAULT:@SECLEVEL=0"' >> $ADDONDIR/client.conf
+         if [ -f "$clientConfFilePath" ]; then             
+             # Die temporäre Datei nach /var/etc kopieren, um frühere Versionen von RaspberryMatic zu unterstützen
+             clientConfToUse="/var/etc/cloudmatic_openvpn_client.conf"
+             cp "$clientConfFilePath" "$clientConfToUse"
+             # Überprüfen, ob das Zertifikat den Signaturalgorithmus sha1WithRSAEncryption verwendet
+             isSha1WithRSAEncryption=$(openssl x509 -in "$certificateFilePath" -noout -text | grep "Signature Algorithm: sha1WithRSAEncryption")
+             
+             if [ -n "$isSha1WithRSAEncryption" ]; then
+                # sha1WithRSAEncryption wird verwendet
+                if [ ! "$(grep 'tls-cipher "DEFAULT:@SECLEVEL=0"' $clientConfFilePath)" ]; then
+                    echo "$workaroundTlsCipher" >> $clientConfFilePath
+                fi
+             else
+                # sha1WithRSAEncryption wird nicht verwendet
+                # Temporäre Datei erstellen, um die geänderten Daten zu speichern
+                tempClientConfFile=$(mktemp)         
+                       
+                # Die Zeile mit dem angegebenen Inhalt aus der Datei entfernen
+                sed "/$workaroundTlsCipher/d" "$clientConfFilePath" > "$tempClientConfFile"   
+                
+                # Die temporäre Datei in die ursprüngliche Datei umbenennen                                            
+                mv "$tempClientConfFile" "$clientConfToUse"
              fi
          fi
      fi
+     
      Processname=openvpn
      if [ ! -n "`pidof $Processname`" ] ; then  
         if [ $dienst -ge 1 ] ; then
 			/bin/busybox logger -t homematic -p user.info "meine-homematic.de loophammer startet openvpn."
-			ovstart=`/opt/mh/openvpn --daemon --config $ADDONDIR/client.conf --cd $ADDONDIR`
+			ovstart=`/opt/mh/openvpn --daemon --config $clientConfToUse --cd $ADDONDIR`
 		fi 
      fi
 
