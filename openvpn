@@ -1,1 +1,32 @@
-/usr/sbin/openvpn
+#!/bin/sh
+#
+# openvpn wrapper script to execute openvpn binary with the supplied
+# command options but potentially apply certain modifications beforehand.
+#
+
+OPENVPN=/usr/sbin/openvpn
+OPENVPN_ARGS=$*
+CLIENT_CONF=/var/etc/cloudmatic_openvpn_client.conf
+CLIENT_CRT=/etc/config/addons/mh/client.crt
+
+# extract supplied --config from command args and copy it to the
+# client conf under /var/etc
+CONF=$(echo "${OPENVPN_ARGS}" | sed 's/.* --config \(.*\.conf\) .*/\1/g')
+cp "${CONF}" ${CLIENT_CONF}
+
+# To temporary workaround the still existing security flaw in the CloudMatic
+# infrastructure that SHA1 hashed certificates are still used we make sure the
+# supplied openvpn client conf will contain the 'tls-cipher "DEFAULT:@SECLEVEL=0"'
+# option for the time being. (cf. https://github.com/jens-maus/RaspberryMatic/issues/2442)
+if openssl x509 -in ${CLIENT_CRT} -noout -text | grep -qm1 "sha1WithRSAEncryption"; then
+  if ! grep 'tls-cipher "DEFAULT:@SECLEVEL=0"' ${CLIENT_CONF}; then
+    echo 'tls-cipher "DEFAULT:@SECLEVEL=0"' >>${CLIENT_CONF}
+  fi
+fi
+
+# modify args to contain the new client conf from /var
+OPENVPN_ARGS=$(echo "${OPENVPN_ARGS}" | sed "s|${CONF}|${CLIENT_CONF}|g")
+
+# start openvpn
+# shellcheck disable=SC2086
+${OPENVPN} ${OPENVPN_ARGS}
