@@ -8,6 +8,7 @@ OPENVPN=/usr/sbin/openvpn
 OPENVPN_ARGS=$*
 CLIENT_CONF=/var/etc/cloudmatic_openvpn_client.conf
 CLIENT_CRT=/etc/config/addons/mh/client.crt
+CLIENT_KEY=/etc/config/addons/mh/client.key
 
 # extract supplied --config from command args and copy it to the
 # client conf under /var/etc
@@ -30,6 +31,16 @@ fi
 
 # modify args to contain the new client conf from /var
 OPENVPN_ARGS=$(echo "${OPENVPN_ARGS}" | sed "s|${CONF}|${CLIENT_CONF}|g")
+
+# make sure that the obsolete ns-cert-type option is replaced by remote-cert-tls
+sed -i 's/ns-cert-type/remote-cert-tls/g' ${CLIENT_CONF}
+
+# disable comp-lzo as compression is discouraged for security reasons
+# (cf. https://community.openvpn.net/openvpn/wiki/DeprecatedOptions)
+sed -i 's/comp-lzo/#comp-lzo/g' ${CLIENT_CONF}
+
+# make sure client.key has the right (safe) permissions before using it
+chmod 600 ${CLIENT_KEY}
 
 # start openvpn
 # shellcheck disable=SC2086
