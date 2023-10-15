@@ -37,7 +37,7 @@ sed -i 's/ns-cert-type/remote-cert-tls/g' ${CLIENT_CONF}
 
 # disable comp-lzo as compression is discouraged for security reasons
 # (cf. https://community.openvpn.net/openvpn/wiki/DeprecatedOptions)
-sed -i 's/comp-lzo/#comp-lzo/g' ${CLIENT_CONF}
+#sed -i 's/comp-lzo/#comp-lzo/g' ${CLIENT_CONF}
 
 # make sure client.key has the right (safe) permissions before using it
 chmod 600 ${CLIENT_KEY}
